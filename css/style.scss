@@ -1,0 +1,101 @@
+.main{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.game{
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+
+
+  width: 1014px;
+  height: 492px;
+  border: 2px solid black;
+
+  padding: 61px 61px;
+  box-sizing: border-box;
+
+  background: linear-gradient( #bbb, transparent 1px), linear-gradient( 90deg, #bbb, transparent 1px);
+  background-size: calc(306px/10) calc(305px/10);
+  background-position: top left;
+
+}
+
+.sea{
+  width: 307px;
+  height: 307px;
+  border: 2px solid #3355aa ;
+  font-size: 0;
+  box-sizing: border-box;
+}
+.sea__item{
+  position: relative;
+  width: 10%;
+  height: 10%;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.sea__disabled{
+  user-select: none;
+  cursor: default;
+
+  & > * {
+    cursor: default; 
+  }
+}
+
+.sea__item_choose{
+  &:before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #3355aa;
+  }
+}
+
+.ship__item{
+  border: 2px solid #3355aa;
+}
+
+.sea__item_killed{
+  border: 2px solid #3355aa;
+
+  &:before,
+  &:after{
+    position: absolute;
+    content: "";
+    top: 46%;
+    bottom: auto;
+    left: -26%;
+    bottom: auto;
+    right: auto;
+    width: 150%;
+    height: 2px;
+    border-radius: 50%;
+    background-color: #3355aa;
+  }
+
+  &:before{
+    transform: rotate(45deg);
+  }
+
+  &:after{
+    transform: rotate(-45deg);
+  }
+
+}

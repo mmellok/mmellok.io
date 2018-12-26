@@ -1,0 +1,104 @@
+.main {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
+
+.game {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 1014px;
+  height: 492px;
+  border: 2px solid black;
+  padding: 61px 61px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(#bbb, transparent 1px), -webkit-linear-gradient(left, #bbb, transparent 1px);
+  background: -o-linear-gradient(#bbb, transparent 1px), -o-linear-gradient(left, #bbb, transparent 1px);
+  background: linear-gradient(#bbb, transparent 1px), linear-gradient(90deg, #bbb, transparent 1px);
+  background-size: calc(306px/10) calc(305px/10);
+  background-position: top left; }
+
+.sea {
+  width: 307px;
+  height: 307px;
+  border: 2px solid #3355aa;
+  font-size: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.sea__item {
+  position: relative;
+  width: 10%;
+  height: 10%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer; }
+
+.sea__disabled {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default; }
+  .sea__disabled > * {
+    cursor: default; }
+
+.sea__item_choose:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #3355aa; }
+
+.ship__item {
+  border: 2px solid #3355aa; }
+
+.sea__item_killed {
+  border: 2px solid #3355aa; }
+  .sea__item_killed:before, .sea__item_killed:after {
+    position: absolute;
+    content: "";
+    top: 46%;
+    bottom: auto;
+    left: -26%;
+    bottom: auto;
+    right: auto;
+    width: 150%;
+    height: 2px;
+    border-radius: 50%;
+    background-color: #3355aa; }
+  .sea__item_killed:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .sea__item_killed:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
